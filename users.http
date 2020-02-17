@@ -1,0 +1,39 @@
+PUT http://localhost:8080/api/users-backend/{{userId}}/settings
+Content-Type: application/json
+
+{
+  "key": "otro",
+  "value": "otro"
+}
+
+###
+
+POST http://localhost:8080/api/users-backend/
+Content-Type: application/json
+
+{
+  "name":"Test 2",
+  "userSettings" : {
+    "key": "value",
+    "other" : "nice"
+  }
+}
+
+###
+
+
+GET http://localhost:8080/api/users-backend/
+Accept: application/json
+
+###
+
+GET http://localhost:8080/api/users-backend/{{userId}}/settings
+Accept: application/json
+
+###
+
+GET http://localhost:8080/api/users-backend/{{userId}}/settings/key
+Accept: application/json
+
+###
+
